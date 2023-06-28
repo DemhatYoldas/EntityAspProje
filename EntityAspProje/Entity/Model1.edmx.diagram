@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="69c06ed4f0594a9e82f6fa174268b0c1" Name="Diagram1">
+        <EntityTypeShape EntityType="ASPDBModel.sysdiagrams" Width="1.5" PointX="7.375" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASPDBModel.Tbl_Kategori" Width="1.5" PointX="0.875" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASPDBModel.Tbl_Musteri" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASPDBModel.Tbl_Personel" Width="1.5" PointX="6.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASPDBModel.Tbl_Satis" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASPDBModel.Tbl_Urun" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="ASPDBModel.FK_Tbl_Urun_Tbl_Kategori" ManuallyRouted="false" />
+        <AssociationConnector Association="ASPDBModel.FK_Tbl_Satis_Tbl_Musteri" ManuallyRouted="false" />
+        <AssociationConnector Association="ASPDBModel.FK_Tbl_Satis_Tbl_Personel" ManuallyRouted="false" />
+        <AssociationConnector Association="ASPDBModel.FK_Tbl_Satis_Tbl_Urun" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
