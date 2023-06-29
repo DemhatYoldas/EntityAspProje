@@ -17,9 +17,11 @@
                     <td><%#Eval("KATEGORIID")%></td>
                     <td><%#Eval("KATEGORIAD")%></td>
                     <td>
-                        <asp:HyperLink ID="HyperLinkSil" CssClass="btn btn-danger" runat="server">SİL</asp:HyperLink></td>
+                        <asp:HyperLink NavigateUrl='<%# "~/KategoriSil.Aspx?KATEGORIID=" + Eval("KATEGORIID") %>' ID="HyperLinkSil"  CssClass="btn btn-danger" runat="server">SİL</asp:HyperLink></td>
                     <td>
-                        <asp:HyperLink ID="HyperLinkGuncelle" CssClass="btn btn-success" runat="server">GÜNCELLE</asp:HyperLink></td>
+                        <asp:HyperLink NavigateUrl='<%#"~/KategoriGuncelle.Aspx?KATEGORIID=" + Eval("KATEGORIID") %>' ID="HyperLinkGuncelle" CssClass="btn btn-success" runat="server">GÜNCELLE</asp:HyperLink>
+
+                    </td>
                 </tr>
             </ItemTemplate>
         </asp:Repeater>
