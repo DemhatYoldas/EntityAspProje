@@ -89,6 +89,7 @@
     <Content Include="KategoriGuncelle.aspx" />
     <Content Include="Kategoriler.aspx" />
     <Content Include="KategoriSil.aspx" />
+    <Content Include="Musteri\Musteriler.aspx" />
     <Content Include="Urun\UrunGuncelle.aspx" />
     <Content Include="Urun\Urunler.aspx" />
     <Content Include="Urun\UrunSil.aspx" />
@@ -163,6 +164,13 @@
     </Compile>
     <Compile Include="KategoriSil.aspx.designer.cs">
       <DependentUpon>KategoriSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Musteri\Musteriler.aspx.cs">
+      <DependentUpon>Musteriler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Musteri\Musteriler.aspx.designer.cs">
+      <DependentUpon>Musteriler.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Urun\UrunGuncelle.aspx.cs">

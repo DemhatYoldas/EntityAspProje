@@ -26,6 +26,7 @@ namespace EntityAspProje.Entity
         public Nullable<byte> URUNKATEGORİ { get; set; }
         public Nullable<decimal> URUNFİYAT { get; set; }
         public Nullable<short> URUNSTOK { get; set; }
+        public Nullable<bool> DURUM { get; set; }
     
         public virtual Tbl_Kategori Tbl_Kategori { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

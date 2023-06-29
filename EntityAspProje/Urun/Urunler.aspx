@@ -21,14 +21,14 @@
                     <td><%#Eval("URUNID")%></td>
                     <td><%#Eval("URUNAD")%></td>
                     <td><%#Eval("URUNMARKA")%></td>
-                    <td><%#Eval("URUNKATEGORİ")%></td>
+                    <td><%#Eval("KATEGORIAD")%></td>
                     <td><%#Eval("URUNFİYAT")%></td>
                     <td><%#Eval("URUNSTOK")%></td>
                     <td>
-                        <asp:HyperLink NavigateUrl='<%# "~/UrunSil.Aspx?URUNID=" + Eval("URUNID") %>' ID="HyperLinkSil" CssClass="btn btn-danger" runat="server">SİL</asp:HyperLink>
+                        <asp:HyperLink NavigateUrl='<%# "~/Urun/UrunSil.Aspx?URUNID=" + Eval("URUNID") %>' ID="HyperLinkSil" CssClass="btn btn-danger" runat="server">SİL</asp:HyperLink>
                     </td>
                     <td>
-                        <asp:HyperLink NavigateUrl='<%#"~/UrunGuncelle.Aspx?URUNID=" + Eval("URUNID") %>' ID="HyperLinkGuncelle" CssClass="btn btn-success" runat="server">GÜNCELLE</asp:HyperLink>
+                        <asp:HyperLink NavigateUrl='<%#"~/Urun/UrunGuncelle.Aspx?URUNID=" + Eval("URUNID") %>' ID="HyperLinkGuncelle" CssClass="btn btn-success" runat="server">GÜNCELLE</asp:HyperLink>
                     </td>
                 </tr>
             </ItemTemplate>

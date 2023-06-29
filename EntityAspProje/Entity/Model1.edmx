@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ASPDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ASPDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -57,6 +57,7 @@
           <Property Name="URUNKATEGORİ" Type="tinyint" />
           <Property Name="URUNFİYAT" Type="decimal" Precision="18" Scale="2" />
           <Property Name="URUNSTOK" Type="smallint" />
+          <Property Name="DURUM" Type="bit" />
         </EntityType>
         <Association Name="FK_Tbl_Satis_Tbl_Musteri">
           <End Role="Tbl_Musteri" Type="Self.Tbl_Musteri" Multiplicity="0..1" />
@@ -130,8 +131,7 @@
             <End Role="Tbl_Urun" EntitySet="Tbl_Urun" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ASPDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -195,6 +195,7 @@
           <Property Name="URUNSTOK" Type="Int16" />
           <NavigationProperty Name="Tbl_Kategori" Relationship="Self.FK_Tbl_Urun_Tbl_Kategori" FromRole="Tbl_Urun" ToRole="Tbl_Kategori" />
           <NavigationProperty Name="Tbl_Satis" Relationship="Self.FK_Tbl_Satis_Tbl_Urun" FromRole="Tbl_Urun" ToRole="Tbl_Satis" />
+          <Property Name="DURUM" Type="Boolean" />
         </EntityType>
         <Association Name="FK_Tbl_Urun_Tbl_Kategori">
           <End Role="Tbl_Kategori" Type="Self.Tbl_Kategori" Multiplicity="0..1" />
@@ -324,6 +325,7 @@
           <EntitySetMapping Name="Tbl_Urun">
             <EntityTypeMapping TypeName="ASPDBModel.Tbl_Urun">
               <MappingFragment StoreEntitySet="Tbl_Urun">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
                 <ScalarProperty Name="URUNID" ColumnName="URUNID" />
                 <ScalarProperty Name="URUNAD" ColumnName="URUNAD" />
                 <ScalarProperty Name="URUNMARKA" ColumnName="URUNMARKA" />

@@ -13,7 +13,16 @@ namespace EntityAspProje.Urun
         ASPDBEntities db=new ASPDBEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
-            var urunler = db.Tbl_Urun.ToList();
+            //var urunler = db.Tbl_Urun.Where(x=>x.DURUM==true).ToList();
+            var urunler = (from x in db.Tbl_Urun.Where(x=>x.DURUM==true) select  new 
+            {
+                x.URUNID,
+                x.URUNAD,
+                x.URUNMARKA,
+                x.Tbl_Kategori.KATEGORIAD,
+                x.URUNFİYAT,
+                x.URUNSTOK
+            }).ToList();
             Repeater1.DataSource = urunler;
             Repeater1.DataBind();
         }
