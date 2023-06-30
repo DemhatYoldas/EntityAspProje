@@ -47,6 +47,7 @@
           <Property Name="PERSONEL" Type="tinyint" />
           <Property Name="MUSTERI" Type="int" />
           <Property Name="FIYAT" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DURUM" Type="bit" />
         </EntityType>
         <EntityType Name="Tbl_Urun">
           <Key>
@@ -184,6 +185,7 @@
           <NavigationProperty Name="Tbl_Musteri" Relationship="Self.FK_Tbl_Satis_Tbl_Musteri" FromRole="Tbl_Satis" ToRole="Tbl_Musteri" />
           <NavigationProperty Name="Tbl_Personel" Relationship="Self.FK_Tbl_Satis_Tbl_Personel" FromRole="Tbl_Satis" ToRole="Tbl_Personel" />
           <NavigationProperty Name="Tbl_Urun" Relationship="Self.FK_Tbl_Satis_Tbl_Urun" FromRole="Tbl_Satis" ToRole="Tbl_Urun" />
+          <Property Name="DURUM" Type="Boolean" />
         </EntityType>
         <EntityType Name="Tbl_Urun">
           <Key>
@@ -317,6 +319,7 @@
           <EntitySetMapping Name="Tbl_Satis">
             <EntityTypeMapping TypeName="ASPDBModel.Tbl_Satis">
               <MappingFragment StoreEntitySet="Tbl_Satis">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
                 <ScalarProperty Name="SATISID" ColumnName="SATISID" />
                 <ScalarProperty Name="URUN" ColumnName="URUN" />
                 <ScalarProperty Name="PERSONEL" ColumnName="PERSONEL" />
