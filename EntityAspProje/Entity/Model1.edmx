@@ -29,6 +29,7 @@
           <Property Name="MUSTERIID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MUSTERIAD" Type="varchar" MaxLength="20" />
           <Property Name="MUSTERISOYAD" Type="varchar" MaxLength="20" />
+          <Property Name="DURUM" Type="bit" />
         </EntityType>
         <EntityType Name="Tbl_Personel">
           <Key>
@@ -161,6 +162,7 @@
           <Property Name="MUSTERIAD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="MUSTERISOYAD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Tbl_Satis" Relationship="Self.FK_Tbl_Satis_Tbl_Musteri" FromRole="Tbl_Musteri" ToRole="Tbl_Satis" />
+          <Property Name="DURUM" Type="Boolean" />
         </EntityType>
         <EntityType Name="Tbl_Personel">
           <Key>
@@ -297,6 +299,7 @@
           <EntitySetMapping Name="Tbl_Musteri">
             <EntityTypeMapping TypeName="ASPDBModel.Tbl_Musteri">
               <MappingFragment StoreEntitySet="Tbl_Musteri">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
                 <ScalarProperty Name="MUSTERIID" ColumnName="MUSTERIID" />
                 <ScalarProperty Name="MUSTERIAD" ColumnName="MUSTERIAD" />
                 <ScalarProperty Name="MUSTERISOYAD" ColumnName="MUSTERISOYAD" />
