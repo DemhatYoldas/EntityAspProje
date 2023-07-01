@@ -15,31 +15,31 @@ namespace EntityAspProje.Satis
     {
 
         /// <summary>
-        /// TxtUrunAd control.
+        /// TextUrunAdi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtUrunAd;
+        protected global::System.Web.UI.WebControls.DropDownList TextUrunAdi;
 
         /// <summary>
-        /// TxtPersonelAd control.
+        /// TextPersonelAdi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtPersonelAd;
+        protected global::System.Web.UI.WebControls.DropDownList TextPersonelAdi;
 
         /// <summary>
-        /// TxtMusteriAd control.
+        /// TextMusteriAdi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtMusteriAd;
+        protected global::System.Web.UI.WebControls.DropDownList TextMusteriAdi;
 
         /// <summary>
         /// TxtFiyat control.
